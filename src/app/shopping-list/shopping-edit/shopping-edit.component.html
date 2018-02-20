@@ -1,19 +1,27 @@
 <div class="row">
   <div class="col">
-    <form action="">
+    <form action="" onsubmit="return false">
       <div class="row">
         <div class="col-xs-12 form-group">
           <label for="name">Name</label>
-          <input type="text" id="name" class="form-control">
+          <input
+            type="text"
+            id="name"
+            class="form-control"
+            #nameInput>
         </div>
         <div class="col-xs-5 form-group">
           <label for="amount">Amount</label>
-          <input type="text" id="amount" class="form-control">
+          <input
+            type="text"
+            id="amount"
+            class="form-control"
+            #amountInput>
         </div>
       </div>
       <div class="row">
           <div class="col">
-            <button class="btn btn-success" type="submit">Add</button>
+            <button class="btn btn-success" type="submit" (click)="onAddItem()">Add</button>
             <button class="btn btn-danger" type="submit">Remove</button>
             <button class="btn btn-primary" type="submit">Clear</button>
           </div>
