@@ -13,7 +13,7 @@ export class RecipeListComponent implements OnInit {
     // tslint:disable-next-line:max-line-length
     new Recipe('Test Recipe', 'Test Test Test', 'https://imagesvc.timeincapp.com/v3/mm/image?url=http%3A%2F%2Fcdn-image.myrecipes.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fmedium_2x%2Fpublic%2Fbest-ever-seafood-gumbo-sl.jpg%3Fitok%3D-pTK0I90&w=700&q=85'),
     // tslint:disable-next-line:max-line-length
-    new Recipe('Test Recipe', 'Test Test Test', 'https://imagesvc.timeincapp.com/v3/mm/image?url=http%3A%2F%2Fcdn-image.myrecipes.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fmedium_2x%2Fpublic%2Fbest-ever-seafood-gumbo-sl.jpg%3Fitok%3D-pTK0I90&w=700&q=85'),
+    new Recipe('Test Recipe 2', 'Test Test Test', 'https://imagesvc.timeincapp.com/v3/mm/image?url=http%3A%2F%2Fcdn-image.myrecipes.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fmedium_2x%2Fpublic%2Fbest-ever-seafood-gumbo-sl.jpg%3Fitok%3D-pTK0I90&w=700&q=85'),
   ];
 
   constructor() { }
