@@ -2,22 +2,22 @@
   <a class="navbar-brand" href="#">Recipe Book</a>
   <div class="collapse navbar-collapse">
     <ul class="navbar-nav w-100">
-      <li class="nav-item">
-        <a class="nav-link" href="#" (click)="onSelect('recipe')">Recipe</a>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/recipes">Recipe</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" (click)="onSelect('shoppinh-list')">Shopping List</a>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/shopping-list">Shopping List</a>
       </li>
       <li class="nav-item dropdown ml-auto" ngbDropdown>
-        <a class="nav-link dropdown-toggle" href="#" ngbDropdownToggle>
+        <a class="nav-link dropdown-toggle" ngbDropdownToggle>
           Manage
         </a>
         <ul class="dropdown-menu dropdown-menu-right" ngbDropdownMenu aria-labelledby="navbarDropdownMenuLink" appDropdown>
           <li>
-            <a class="dropdown-item" href="#">Save Data</a>
+            <a class="dropdown-item">Save Data</a>
           </li>
           <li>
-            <a class="dropdown-item" href="#">Fetch Data</a>
+            <a class="dropdown-item">Fetch Data</a>
           </li>
         </ul>
       </li>
