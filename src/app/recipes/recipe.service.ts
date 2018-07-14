@@ -12,16 +12,16 @@ export class RecipeService {
             'Super tasty schnitzel',
             'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Wiener-Schnitzel02.jpg/220px-Wiener-Schnitzel02.jpg',
             [
-                new Ingredient("Meat", 1),
-                new Ingredient("French fries", 20),
+                new Ingredient('Meat', 1),
+                new Ingredient('French fries', 20),
             ]),
         // tslint:disable-next-line:max-line-length
         new Recipe('Burger',
             'King of Burger',
             'https://upload.wikimedia.org/wikipedia/ru/thumb/3/3a/Burger_King_Logo.svg/150px-Burger_King_Logo.svg.png',
             [
-                new Ingredient("Buns", 2),
-                new Ingredient("Meat", 1),
+                new Ingredient('Buns', 2),
+                new Ingredient('Meat', 1),
             ]),
     ];
 

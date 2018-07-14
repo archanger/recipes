@@ -15,10 +15,8 @@ export class RecipeDetailComponent implements OnInit {
   constructor(
     private recipeService: RecipeService,
     private route: ActivatedRoute,
-    private router: Router) 
-  {
-
-  }
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.route.params.subscribe(
