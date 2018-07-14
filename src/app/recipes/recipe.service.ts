@@ -3,7 +3,9 @@ import { Injectable } from '@angular/core';
 import { Recipe } from './recipe.model';
 import { Ingredient } from '../shared/ingredient.model';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 export class RecipeService {
 
     private recipes: Recipe[] = [
