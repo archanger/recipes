@@ -8,18 +8,27 @@
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" routerLink="/shopping-list">Shopping List</a>
       </li>
-      <li class="nav-item dropdown ml-auto d-inline-block" ngbDropdown placement="bottom-right">
+    </ul>
+    <ul class="navbar-nav ml-auto w-50">
+      <ng-template [ngIf]="!isAuthenticated()">
+          <li class="nav-item">
+              <a class="nav-link" routerLink="/signin">Log In</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/signup">Register</a>
+            </li>
+      </ng-template>
+      <li class="nav-item" *ngIf="isAuthenticated()">
+        <a class="nav-link" style="cursor: pointer;" (click)="logout()">Logout</a>
+      </li>
+      <li class="nav-item dropdown d-inline-block" ngbDropdown placement="bottom-right" *ngIf="isAuthenticated()">
         <a class="nav-link dropdown-toggle" ngbDropdownToggle id="navbarDropdownMenuLink">
           Manage
         </a>
-        <ul class="dropdown-menu dropdown-menu-right" ngbDropdownMenu aria-labelledby="navbarDropdownMenuLink">
-          <li>
-            <a class="dropdown-item">Save Data</a>
-          </li>
-          <li>
-            <a class="dropdown-item">Fetch Data</a>
-          </li>
-        </ul>
+        <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="navbarDropdownMenuLink">
+            <a style="cursor: pointer;" class="dropdown-item" (click)="saveData()">Save Data</a>
+            <a style="cursor: pointer;" class="dropdown-item" (click)="fetchData()">Fetch Data</a>
+        </div>
       </li>
     </ul>
   </div>
