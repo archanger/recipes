@@ -1,3 +1,4 @@
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from './../shared/shared.module';
 import { RecipesRoutingModule } from './recipes-routing.module';
 import { NgModule } from '@angular/core';
@@ -16,7 +17,8 @@ import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
     CommonModule,
     ReactiveFormsModule,
     RecipesRoutingModule,
-    SharedModule
+    SharedModule,
+    NgbModule
   ],
   declarations: [
     RecipesComponent,
