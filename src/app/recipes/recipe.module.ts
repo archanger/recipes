@@ -1,5 +1,5 @@
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { SharedModule } from './../shared/shared.module';
+import { SharedModule } from '../shared/shared.module';
 import { RecipesRoutingModule } from './recipes-routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
