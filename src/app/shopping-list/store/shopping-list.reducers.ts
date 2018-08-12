@@ -8,10 +8,6 @@ import {
     AddIngredients
 } from './shopping-list.action';
 
-export interface AppState {
-    shoppingList: State;
-}
-
 export interface State {
     ingredients: Ingredient[];
     editedIngredient: Ingredient;
@@ -50,14 +46,18 @@ export function  shoppingListReducer(state = initialState, action: ShoppingListA
             ingredientsForUpdate[state.editedIngredientIndex] = updatedIngredient;
             return {
                 ...state,
-                ingredients: ingredientsForUpdate
+                ingredients: ingredientsForUpdate,
+                editedIngredient: null,
+                editedIngredientIndex: -1
             };
         case ShoppingListActionTypes.DeleteIngredient:
             const ingredientsForDelete = state.ingredients;
             ingredientsForDelete.splice(state.editedIngredientIndex, 1);
             return {
                 ...state,
-                ingredients: ingredientsForDelete
+                ingredients: ingredientsForDelete,
+                editedIngredient: null,
+                editedIngredientIndex: -1
             };
         case ShoppingListActionTypes.StartEdit:
             const editingPayload = (<StartEdit>action).payload;
@@ -66,6 +66,12 @@ export function  shoppingListReducer(state = initialState, action: ShoppingListA
                 ...state,
                 editedIngredient: editedIngredient,
                 editedIngredientIndex: editingPayload
+            };
+        case ShoppingListActionTypes.StopEdit:
+            return {
+                ...state,
+                editedIngredient: null,
+                editedIngredientIndex: -1
             };
         default:
             return state;

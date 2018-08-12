@@ -7,6 +7,7 @@ export enum ShoppingListActionTypes {
     UpdateIngredient = 'UPDATE_INGREDIENT',
     DeleteIngredient = 'DELETE_ INGREDIENT',
     StartEdit = 'START_EDIT',
+    StopEdit = 'START_EDIT',
 }
 
 export class AddIngredient implements Action {
@@ -37,9 +38,14 @@ export class StartEdit implements Action {
     constructor(public payload: number) {}
 }
 
+export class StopEdit implements Action {
+    readonly type = ShoppingListActionTypes.StopEdit;
+}
+
 export type ShoppingListActions = 
     | AddIngredient 
     | AddIngredients
     | UpdateIngredient
     | DeleteIngredient
-    | StartEdit;
+    | StartEdit
+    | StopEdit;
